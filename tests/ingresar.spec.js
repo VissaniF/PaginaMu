@@ -86,11 +86,7 @@ test('test', async ({ page }) => {
  const page18 = await page18Promise;
 
  const page19Promise = page.waitForEvent('popup');
- await page.locator('#vote-19-1').click();
+ await page.getByRole('button', { name: 'Vote Now!' }).click();;
  const page19 = await page19Promise;
 
- const page20Promise = page.waitForEvent('popup');
- await page.locator('#vote-20-1').click();
- const page20 = await page20Promise;
-  
 });
